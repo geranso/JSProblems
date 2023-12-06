@@ -50,3 +50,14 @@ let Warrenton = ['Shoes', 'Cloth', 'water','box'];
 console.log(Warrenton.length);
 
 //Question No6
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
+  // Example usage:
+  const minNumber = 1;
+  const maxNumber = 100;
+  const randomNumber = getRandomNumber(minNumber, maxNumber);
+  
+  console.log(`Random number between ${minNumber} and ${maxNumber}: ${randomNumber}`);
+  

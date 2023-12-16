@@ -119,4 +119,108 @@ const peopleArray = [
 const youngestPerson = findYoungestPerson(peopleArray);
 console.log("The youngest person is:", youngestPerson);
 //46
+function processPeople(people) {
+  if (people.length === 0) {
+    return "No people provided.";
+  }
+
+  const processedPeople = [];
+
+  for (let i = 0; i < people.length; i++) {
+    const { name, age, email } = people[i];
+    const isAdult = age >= 18;
+
+    const processedPerson = {
+      name,
+      isAdult,
+    };
+
+    if (email) {
+      processedPerson.email = email;
+    }
+
+    processedPeople.push(processedPerson);
+  }
+
+  return processedPeople;
+}
+
+// Example usage:
+const peopleArr = [
+  { name: "Alice", age: 25, email: "alice@example.com" },
+  { name: "Bob", age: 16, email: "bob@example.com" },
+  { name: "Charlie", age: 30 },
+];
+
+const processedPeople = processPeople(peopleArr);
+console.log("Processed People:", processedPeople);
+//50
+function formatPeopleInfo(people) {
+  if (people.length === 0) {
+    return "No people provided.";
+  }
+
+  const formattedInfo = [];
+
+  for (let i = 0; i < people.length; i++) {
+    const { name, age, email } = people[i];
+
+    let infoString = `${name} is ${age} years old`;
+
+    if (email) {
+      infoString += ` and has email ${email}`;
+    }
+
+    formattedInfo.push(infoString);
+  }
+
+  return formattedInfo;
+}
+
+// Example usage:
+const peopleArray1 = [
+  { name: "Geze", age: 52, email: "geze@example.com" },
+  { name: "Ashu", age: 16 },
+  { name: "Haymi", age: 30, email: "haymi@example.com" },
+];
+
+const formattedInfo = formatPeopleInfo(peopleArray1);
+console.log("Formatted Info:", formattedInfo);
+//51
+function formatPeopleInf(people) {
+  if (people.length === 0) {
+    return "No people provided.";
+  }
+
+  const formattedInf = [];
+
+  for (let i = 0; i < people.length; i++) {
+    const { name, age, email } = people[i];
+
+    let infoString1 = `${name} is ${age} years old`;
+
+    if (email) {
+      infoString1 += ` and has email ${email}`;
+    } else {
+      infoString1 += ` and has no email  ${email}`;
+    }
+
+    formattedInf.push(infoString1);
+  }
+
+  return formattedInf;
+}
+
+// Example usage:
+const peopleArray2 = [
+  { name: "Alice", age: 25, email: "alice@example.com" },
+  { name: "Bob", age: 16 },
+  { name: "Charlie", age: 30, email: "charlie@example.com" },
+  { name: "David", age: 22 },
+];
+
+const formattedInf = formatPeopleInfo(peopleArray2);
+console.log("Formatted Inf:", formattedInf);
+
+
 

@@ -219,7 +219,7 @@ const peopleArray2 = [
   { name: "David", age: 22 },
 ];
 
-const formattedInf = formatPeopleInfo(peopleArray2);
+const formattedInf = formatPeopleInf(peopleArray2);
 console.log("Formatted Inf:", formattedInf);
 
 

@@ -60,4 +60,63 @@ function getRandomNumber(min, max) {
   const randomNumber = getRandomNumber(minNumber, maxNumber);
   
   console.log(`Random number between ${minNumber} and ${maxNumber}: ${randomNumber}`);
-  
+//34
+const helloName = (name) => `Hello ${name}!`;
+
+// Examples:
+console.log(helloName("Gerald"));    // Output: Hello Gerald!
+console.log(helloName("Tiffany"));   // Output: Hello Tiffany!
+console.log(helloName("Ed"));        // Output: Hello Ed!
+//35
+function calculateCarsNeeded(people) {
+  // Each car can hold 5 people (4 passengers + 1 driver)
+  const peoplePerCar = 5;
+
+  // Calculate the number of cars needed
+  const carsNeeded = Math.ceil(people / peoplePerCar);
+
+  return carsNeeded;
+}
+
+// Example usage:
+const numberOfPeople = 20;
+const carsRequired = calculateCarsNeeded(numberOfPeople);
+
+console.log(`To accommodate ${numberOfPeople} people, you would need ${carsRequired} cars.`);
+//36
+function printOddNumbers() {
+  for (let i = 1; i < 100; i += 2) {
+    console.log(i);
+  }
+}
+
+// Call the function to print odd numbers
+printOddNumbers();
+//44
+function findYoungestPerson(people) {
+  if (people.length === 0) {
+    return "No people provided.";
+  }
+
+  let youngest = people[0];
+
+  for (let i = 1; i < people.length; i++) {
+    if (people[i].age < youngest.age) {
+      youngest = people[i];
+    }
+  }
+
+  return youngest.name;
+}
+
+// Example usage:
+const peopleArray = [
+  { name: "Alex", age: 52, email: "alex@example.com" },
+  { name: "Baby", age: 26, email: "baby@example.com" },
+  { name: "Charlie", age: 28, email: "charlie@example.com" },
+];
+
+const youngestPerson = findYoungestPerson(peopleArray);
+console.log("The youngest person is:", youngestPerson);
+//46
+
